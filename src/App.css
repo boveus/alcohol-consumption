@@ -26,3 +26,97 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+
+.wrap {
+  width: 25%;
+  text-align: center;
+}
+
+/* Wine glass */
+
+.glass {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 0px 0px 50% 50%;
+  padding-top: 50px;
+  box-sizing: border-box;
+  background-color: rgba(0,222,255, 0.3);
+}
+.glass::after {
+  content: "";
+  width: 100px;
+  height: 50px;
+  border-radius: 0px 0px 100px 100px;
+  display:block;
+  z-index: -1;
+  background-color: rgba(255,0,0, 0.5);
+}
+.stem {
+  margin: 0 auto;
+  height: 75px;
+  width: 10px;
+  background-color: rgba(0,222,255, 0.3);
+  border-bottom: 2px solid rgb(0,155.4,178.5) ;
+  border-radius: 0px 0px 5px 5px;
+}
+.base {
+  margin: 0 auto;
+  margin-top: -6px;
+  width: 100px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(0,222,255, 0.3);
+}
+
+/* Beer Glass */
+
+.beerglass {
+  margin: 0 auto;
+  height: 200px;
+  width: 100px;
+  border-radius: 0px 0px 10% 10%;
+  padding-top: 50px;
+  box-sizing: border-box;
+  background-color: rgba(0,222,255, 0.3);
+}
+
+.beerglass::after {
+  content: "";
+  width: 100px;
+  height: 150px;
+  border-radius: 0px 0px 10px 10px;
+  display:block;
+  z-index: -1;
+  background-color: rgba(200,160,0, 0.5);
+}
+
+/* Liquor Bottle */
+
+.bottle {
+  margin: 0 auto;
+  height: 250px;
+  width: 100px;
+  border-radius: 50px 50px 10px 10px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  background-color: rgba(0,222,255, 0.3);
+}
+.bottle::after {
+  content: "";
+  width: 100px;
+  height: 200px;
+  border-radius: 0px 0px 10px 10px;
+  display:block;
+  z-index: -1;
+  background-color: rgba(255,0,0, 0.5);
+}
+.neck {
+  margin: 0 auto;
+  height: 70px;
+  width: 30px;
+  background-color: rgba(0,222,255, 0.3);
+  border-radius: 0px 0px 5px 5px;
+}
