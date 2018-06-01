@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
+import WineGlass from './components/wine_glass'
 import './App.css'
 
 class App extends Component {
@@ -13,9 +14,7 @@ class App extends Component {
         <p className='App-intro'>
           <div class='wrap'>
             <h3> Wine Glass </h3>
-            <div class='glass' />
-            <div class='stem' />
-            <div class='base' />
+            <WineGlass />
             <h3> Beer Glass </h3>
             <div class='beerglass' />
             <div class='handle' />
