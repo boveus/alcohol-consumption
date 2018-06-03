@@ -6,7 +6,7 @@ class BeerGlass extends Component {
     this.state = {fill: 0}
   }
 
-  // Namibia is the highest consumption with 376, so 376 is 100%
+  // Namibia is the highest consumption with 376, so 376 is the maximum
   computeFill () {
     let pcg = this.state.fill / 376
     let topPadding = (170 * pcg) + 30
@@ -17,14 +17,13 @@ class BeerGlass extends Component {
   render () {
     return (
       <div className='beer-glass'>
-        <div className='beerglass' style={{height: `${170 - (170 * (this.state.fill / 376))}px`}} />
+        <div className='beerglass' style={{height: `${(200 - (200 * (this.state.fill / 376)))}px`}} />
         <div className='handle' />
-        <span className='beer' style={{height: `${(170 * (this.state.fill / 376) + 30)}px`}} />
+        <span className='beer' style={{height: `${(200 * (this.state.fill / 376))}px`}} />
       </div>
     )
   }
 }
-
 
 
 export default BeerGlass

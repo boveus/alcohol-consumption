@@ -75,9 +75,8 @@
 
 .beerglass {
   margin: 0 auto;
-  height: 30px;
+  height: 200px;
   width: 100px;
-  border-radius: 0px 0px 0% 0%;
   box-sizing: border-box;
   background-color: rgba(0,222,255, 0.3);
 }
@@ -85,8 +84,7 @@
 .beer {
   margin: 0 auto;
   width: 100px;
-  height: 170px;
-  border-radius: 0px 0px 10px 10px;
+  height: 200px;
   display: block;
   z-index: -1;
   background-color: rgba(200,160,0, 0.5);
