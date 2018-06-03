@@ -7,7 +7,7 @@ import './App.css'
 class App extends Component {
   render () {
     return (
-      <div class='wrap'>
+      <div className='wrap'>
         <h3> Wine Glass </h3>
         <WineGlass />
         <h3> Beer Glass </h3>
