@@ -75,18 +75,17 @@
 
 .beerglass {
   margin: 0 auto;
-  height: 200px;
+  height: 30px;
   width: 100px;
-  border-radius: 0px 0px 10% 10%;
-  padding-top: 150px;
+  border-radius: 0px 0px 0% 0%;
   box-sizing: border-box;
   background-color: rgba(0,222,255, 0.3);
 }
 
-.beerglass::after {
-  content: "";
+.beer {
+  margin: 0 auto;
   width: 100px;
-  height: 50px;
+  height: 170px;
   border-radius: 0px 0px 10px 10px;
   display: block;
   z-index: -1;
