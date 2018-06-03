@@ -10,21 +10,24 @@ class BeerGlass extends Component {
   computeFill () {
     let pcg = this.state.fill / 376
     let topPadding = (170 * pcg) + 30
-    let height = 170 * pcg
+    let height = 170 * this.state.fill
     return [height, topPadding]
   }
-  setFill () {
-    let values = this.computeFill()
-    document.getElementsByClassName('beerglass::after').style.height = values[0]
-    document.getElementsByClassName('beerglass').style.paddingtop = values[1]
-  }
+  // componentDidUpdate (previousProps, previousState) {
+  //   let pcg = this.state.fill / 376
+  //   if (previousProps.data !== this.props.data) {
+  //     console.log('hit it')
+  //     this.setState({height: `${170 * pcg}px`})
+  //     this.setState({paddingTop: `${(170 * pcg) + 30}px`})
+  //   }
+  // }
 
   render () {
     return (
       <div className='beer-glass'>
-        <div className='beerglass' id='beer' />
+        <div className='beerglass' style={{height: `${(170 * (this.state.fill / 376))}px`}} />
         <div className='handle' />
-        <span className='beer' id='beerliquid' />
+        <span className='beer' style={{topPadding: `${(170 * (this.state.fill / 376) + 30)}px`}} />
       </div>
     )
   }
