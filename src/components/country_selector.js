@@ -4,13 +4,15 @@ import data from '../data/data'
 class CountrySelector extends Component {
   constructor (props) {
     super(props)
-    this.state = {country: ''}
+    this.state = {country: '',
+      sendCountry: ''}
 
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange (event) {
     this.setState({country: event.target.value})
+    this.props.sendCountry(event.target.value)
   }
 
   getCountries () {

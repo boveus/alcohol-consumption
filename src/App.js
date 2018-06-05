@@ -6,11 +6,18 @@ import CountrySelector from './components/country_selector'
 import './App.css'
 
 class App extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {country: ''}
+  }
+  getCountry (val) {
+    this.setState({country: val})
+  }
   render () {
     return (
       <div>
         <div>
-          <CountrySelector />
+          <CountrySelector sendCountry={this.getCountry.bind(this)} />
         </div>
         <div className='wrap'>
           <h3> Wine Servings </h3>
