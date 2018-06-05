@@ -25,5 +25,4 @@ class BeerGlass extends Component {
   }
 }
 
-
 export default BeerGlass
