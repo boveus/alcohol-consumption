@@ -4,18 +4,30 @@ import data from '../data/data'
 class CountrySelector extends Component {
   constructor (props) {
     super(props)
-    this.state = {countries: Object.values(data)[0]}
+    this.state = {country: ''}
+
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange (event) {
+    this.setState({country: event.target.value})
+  }
+
+  getCountries () {
+    let innerHtml = ''
+    let dataArray = Object.values(data)[0]
+    for (let i = 0; i < dataArray.length; i++) {
+      innerHtml += `<option>${dataArray[i].country}</option>`
+    }
+    return innerHtml
   }
 
   render () {
     return (
       <div>
-        <label for='selectCountries'> Select a country</label>
-        <input list='countries' id='selectCountries' name='countries' />
-        <datalist id='countries'>
-          <option>{this.state.countries[0].country}</option>
-          <option>{this.state.countries[1].country}</option>
-        </datalist>
+        <label htmlFor='selectCountries'> Select a country</label>
+        <input list='countries' id='selectCountries' name='countries' value={this.state.value} onChange={this.handleChange} />
+        <datalist id='countries' dangerouslySetInnerHTML={{ __html: this.getCountries() }} />
       </div>
     )
   }
