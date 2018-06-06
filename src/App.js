@@ -42,7 +42,7 @@ class App extends Component {
           <h3> Beer Servings </h3>
           <BeerGlass fill={this.state.beer_servings} />
           <h3> Spirit Servings </h3>
-          <LiquorBottle />
+          <LiquorBottle fill={this.state.spirit_servings} />
         </div>
       </div>
     )
