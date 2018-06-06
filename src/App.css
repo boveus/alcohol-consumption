@@ -117,3 +117,16 @@
   border-radius: 0px 0px 5px 5px;
   margin-bottom: -3px;
 }
+
+/* Three columns */
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

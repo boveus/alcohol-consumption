@@ -36,13 +36,16 @@ class App extends Component {
         <div>
           <CountrySelector sendCountry={this.getCountry.bind(this)} />
         </div>
-        <div className='wrap'>
-          <h3> Wine Servings </h3>
-          <WineGlass />
-          <h3> Beer Servings </h3>
-          <BeerGlass fill={this.state.beer_servings} />
-          <h3> Spirit Servings </h3>
-          <LiquorBottle fill={this.state.spirit_servings} />
+        <div className='row'>
+          <div className='column'>
+            <WineGlass />
+          </div>
+          <div className='column'>
+            <BeerGlass fill={this.state.beer_servings} />
+          </div>
+          <div className='column'>
+            <LiquorBottle fill={this.state.spirit_servings} />
+          </div>
         </div>
       </div>
     )

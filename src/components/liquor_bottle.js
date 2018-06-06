@@ -19,5 +19,3 @@ class LiquorBottle extends Component {
 }
 
 export default LiquorBottle
-
-//
