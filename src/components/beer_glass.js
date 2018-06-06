@@ -17,9 +17,9 @@ class BeerGlass extends Component {
   render () {
     return (
       <div className='beer-glass'>
-        <div className='beerglass' style={{height: `${(200 - (200 * (this.state.fill / 376)))}px`}} />
+        <div className='beerglass' style={{height: `${(200 - (200 * (this.props.fill / 376)))}px`}} />
         <div className='handle' />
-        <span className='beer' style={{height: `${(200 * (this.state.fill / 376))}px`}} />
+        <span className='beer' style={{height: `${(200 * (this.props.fill / 376))}px`}} />
       </div>
     )
   }
