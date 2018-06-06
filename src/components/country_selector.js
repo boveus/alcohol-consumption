@@ -6,13 +6,16 @@ class CountrySelector extends Component {
     super(props)
     this.state = {country: '',
       sendCountry: ''}
-
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange (event) {
     this.setState({country: event.target.value})
     this.props.sendCountry(event.target.value)
+  }
+
+  handleFocus (event) {
+    this.setState({value: ''})
   }
 
   getCountries () {
@@ -28,7 +31,7 @@ class CountrySelector extends Component {
     return (
       <div>
         <label htmlFor='selectCountries'> Select a country</label>
-        <input list='countries' id='selectCountries' name='countries' value={this.state.value} onChange={this.handleChange} />
+        <input list='countries' id='selectCountries' name='countries' value={this.state.value} onChange={this.handleChange} onFocus={this.handleFocus.bind(this)} />
         <datalist id='countries' dangerouslySetInnerHTML={{ __html: this.getCountries() }} />
       </div>
     )
