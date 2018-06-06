@@ -11,8 +11,8 @@ class LiquorBottle extends Component {
     return (
       <div className='liquor-bottle'>
         <div className='neck' />
-        <div className='bottle' style={{height: `${(300 - (300 * (this.props.fill / 480)))}px`}} />
-        <div className='spirit' style={{height: `${(300 * (this.props.fill / 480))}px`}} />
+        <div className='bottle' style={{height: `${(200 - (200 * (this.props.fill / 480)))}px`}} />
+        <div className='spirit' style={{height: `${(200 * (this.props.fill / 480))}px`}} />
       </div>
     )
   }
